@@ -33,12 +33,12 @@ player.start_stream
 
 while c = Curses.getch
   case c
-  when Curses::KEY_LEFT
-    player.rewind
-  when Curses::KEY_RIGHT
-    player.forward
-  when ' '
-    player.toggle
+    when Curses::KEY_LEFT
+      player.rewind
+    when Curses::KEY_RIGHT
+      player.forward
+    when ' '
+      player.toggle
   end
 end
 
