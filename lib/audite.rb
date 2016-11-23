@@ -26,7 +26,7 @@ class Audite
     @buffer_size = buffer_size
     @device_name = device_name
     @events = Events.new
-    @stream = Portaudio.new(@buffer_size, @device_name)
+    @stream = Portaudio.new(@buffer_size)
     @song_list = []
   end
 
@@ -75,6 +75,7 @@ class Audite
   end
 
   def start_stream
+    set_current_song unless song_loaded?
     unless @active || !song_loaded?
       @active = true
       @stream.start

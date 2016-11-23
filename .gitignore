@@ -4,3 +4,4 @@ ext/*/Makefile
 ext/*/*.o
 ext/*/*.bundle
 Gemfile.lock
+.idea
